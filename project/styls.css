@@ -1,0 +1,173 @@
+.header {
+    text-align: center;
+}
+
+.idk {
+    color: #000000;
+}
+
+.littlee-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #333;
+}
+
+.card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 50px;
+    color: rgb(143, 143, 143);
+    transition: all 0, 3s ease;
+    animation: forwards;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    list-style-type: none;
+    padding: 1;
+    text-align: center;
+}
+
+nav ul {
+    font-size: 1rem;
+    margin: 1opx 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #010101;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.weko {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: #010101;
+    top: 500px;
+}
+
+.hero1 {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: #010101;
+}
+
+.hero1 {
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+
+.hero1 img {
+    font-weight: 400;
+    width: 100;
+    height: 500;
+}
+
+.cardss {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: #010101;
+}
+
+.cardss {
+    position: absolute;
+    left: 820px;
+    top: 100px;
+}
+
+.carda {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: #010101;
+}
+
+.carda {
+    position: absolute;
+    left: 1200px;
+    top: 100px;
+}
+
+.hero2 h1 {
+    text-align: center;
+    letter-spacing: 1em;
+    font-weight: 100;
+    top: 1000px;
+}
+
+.hero2 p {
+    text-align: center;
+    font-size: large;
+}
+
+.text h1 {
+    text-align: center;
+    font-size: large;
+    font-weight: 100;
+    letter-spacing: 1em;
+}
+
+.text p {
+    text-align: center;
+    font-size: large;
+}
