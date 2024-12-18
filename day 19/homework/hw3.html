@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>Example Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#pictures">Pictures</a>
+            <a href="#multimedia">Multimedia</a>
+            <a href="#form">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>Welcome to our example website! Below are examples of ordered and unordered lists.</p>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Step One</li>
+                <li>Step Two</li>
+                <li>Step Three</li>
+            </ol>
+
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Item A</li>
+                <li>Item B</li>
+                <li>Item C</li>
+            </ul>
+
+            <hr>
+        </section>
+
+        <section id="pictures">
+            <h2>Pictures</h2>
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+            </div>
+            <br><br>
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+                <img src="https://via.placeholder.com/150" alt="Sample Image">
+            </div>
+            <hr>
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+            <video controls width="320">
+                <source src="example-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br><br>
+            <iframe width="320" height="240" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+            <br><br>
+            <audio controls>
+                <source src="example-audio.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <br><br>
+            <audio controls>
+                <source src="example-audio-2.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <hr>
+        </section>
+
+        <section id="form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="username">Name:</label>
+                <br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+
+                <label for="useremail">Email:</label>
+                <br>
+                <input type="email" id="useremail" name="useremail" required>
+                <br><br>
+
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <br><br>
+
+                <label for="topic">Topic:</label>
+                <br>
+                <select id="topic" name="topic">
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+                <br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+            <hr>
+        </section>
+
+        <aside>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#about">About Section</a></li>
+                <li><a href="#pictures">Pictures Section</a></li>
+                <li><a href="#multimedia">Multimedia Section</a></li>
+                <li><a href="#form">Contact Form</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Example Website</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+</body>
+
+</html>
