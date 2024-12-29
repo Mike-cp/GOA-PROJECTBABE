@@ -1,0 +1,7 @@
+CSS (Cascading Style Sheets) is a language used to style and design web pages. It controls the appearance of HTML elements, such as layout, colors, fonts, and spacing, making websites visually appealing.
+
+Inline CSS applies styles directly within an HTML element using the style attribute. It’s suitable for small, quick customizations but is not recommended for large-scale projects as it’s hard to maintain.
+
+Internal CSS is written inside a <style> tag in the <head> section of an HTML document. It is used when you want to style a single HTML page without affecting others.
+
+External CSS involves linking an external CSS file to the HTML document using a <link> tag. This is the best practice for larger projects as it keeps styles separate from content and allows you to reuse the same CSS across multiple pages
