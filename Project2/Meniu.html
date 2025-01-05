@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Library</title>
+    <style>
+        /* Overall page styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Menu */
+        
+        #nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        #nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #nav ul li {
+            display: inline;
+            padding: 14px 20px;
+        }
+        
+        #nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 14px 16px;
+            display: block;
+            text-align: center;
+        }
+        
+        #nav ul li a:hover {
+            background-color: #575757;
+        }
+        /* Books Section */
+        
+        #books {
+            padding: 20px;
+        }
+        
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        /* Individual book item */
+        
+        .book-item {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .book-item:hover {
+            transform: scale(1.05);
+        }
+        /* Book cover image */
+        
+        .book-cover {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        /* Book card details */
+        
+        .details {
+            padding: 15px;
+        }
+        
+        .details h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .details .category {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        .details .rating {
+            font-size: 14px;
+            color: #f39c12;
+            margin-top: 10px;
+        }
+        
+        .details .read-now {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .details .read-now:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Genres</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="books">
+        <div class="books-container">
+            <!-- Book 1 -->
+            <div class="book-item" id="book1">
+                <div class="book-card">
+                    <img src="book1-cover.jpg" alt="The Boss's Shotgun Wedding-Full Color" class="book-cover">
+                    <div class="details">
+                        <h3>The Boss's Shotgun Wedding</h3>
+                        <p class="category">Premium Content</p>
+                        <p class="category">ScrollToons 16+ TOP HIT</p>
+                        <p class="category">Shibuciyuan / Flower / Kuaikan Comics</p>
+                        <p class="category">Romance Drama Full Color</p>
+                        <p class="rating">★★★★★ 4.2 (6)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-item" id="book2">
+                <div class="book-card">
+                    <img src="book2-cover.jpg" alt="The Boss's Shotgun Wedding-Full Color" class="book-cover">
+                    <div class="details">
+                        <h3>The Boss's Shotgun Wedding</h3>
+                        <p class="category">Premium Content</p>
+                        <p class="category">ScrollToons 16+ TOP HIT</p>
+                        <p class="category">Shibuciyuan / Flower / Kuaikan Comics</p>
+                        <p class="category">Romance Drama Full Color</p>
+                        <p class="rating">★★★★★ 4.2 (6)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-item" id="book3">
+                <div class="book-card">
+                    <img src="book3-cover.jpg" alt="The King’s Secret" class="book-cover">
+                    <div class="details">
+                        <h3>The King’s Secret</h3>
+                        <p class="category">Fantasy Adventure</p>
+                        <p class="category">Top Fantasy Series</p>
+                        <p class="category">Author: Fantasy Guild</p>
+                        <p class="category">Action Drama Full Color</p>
+                        <p class="rating">★★★★☆ 4.5 (8)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-item" id="book4">
+                <div class="book-card">
+                    <img src="book4-cover.jpg" alt="Mystery of the Lost Realm" class="book-cover">
+                    <div class="details">
+                        <h3>Mystery of the Lost Realm</h3>
+                        <p class="category">Mystery Thriller</p>
+                        <p class="category">Mystery Classics Collection</p>
+                        <p class="category">Author: Detective Stories</p>
+                        <p class="category">Thriller Drama</p>
+                        <p class="rating">★★★★★ 4.7 (10)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-item" id="book5">
+                <div class="book-card">
+                    <img src="book5-cover.jpg" alt="Love in the City" class="book-cover">
+                    <div class="details">
+                        <h3>Love in the City</h3>
+                        <p class="category">Romantic Comedy</p>
+                        <p class="category">City Love Series</p>
+                        <p class="category">Author: Urban Writers</p>
+                        <p class="category">Romantic Drama</p>
+                        <p class="rating">★★★★☆ 4.3 (5)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book-item" id="book6">
+                <div class="book-card">
+                    <img src="book6-cover.jpg" alt="City of Secrets" class="book-cover">
+                    <div class="details">
+                        <h3>City of Secrets</h3>
+                        <p class="category">Urban Fantasy</p>
+                        <p class="category">Top Urban Series</p>
+                        <p class="category">Author: City Mysteries</p>
+                        <p class="category">Fantasy Drama</p>
+                        <p class="rating">★★★★☆ 4.5 (7)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="book-item" id="book7">
+                <div class="book-card">
+                    <img src="book7-cover.jpg" alt="The Last Kingdom" class="book-cover">
+                    <div class="details">
+                        <h3>The Last Kingdom</h3>
+                        <p class="category">Historical Fiction</p>
+                        <p class="category">Epic Series</p>
+                        <p class="category">Author: History Books</p>
+                        <p class="category">Historical Drama</p>
+                        <p class="rating">★★★★★ 5 (12)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="book-item" id="book8">
+                <div class="book-card">
+                    <img src="book8-cover.jpg" alt="The Silent Sea" class="book-cover">
+                    <div class="details">
+                        <h3>The Silent Sea</h3>
+                        <p class="category">Sci-Fi Adventure</p>
+                        <p class="category">Top Sci-Fi Collection</p>
+                        <p class="category">Author: Space Adventures</p>
+                        <p class="category">Action Sci-Fi</p>
+                        <p class="rating">★★★★☆ 4.4 (9)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 9 -->
+            <div class="book-item" id="book9">
+                <div class="book-card">
+                    <img src="book9-cover.jpg" alt="Love at First Sight" class="book-cover">
+                    <div class="details">
+                        <h3>Love at First Sight</h3>
+                        <p class="category">Romance</p>
+                        <p class="category">Top Romance Series</p>
+                        <p class="category">Author: Love Stories</p>
+                        <p class="category">Romantic Drama</p>
+                        <p class="rating">★★★★☆ 4.6 (11)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 10 -->
+            <div class="book-item" id="book10">
+                <div class="book-card">
+                    <img src="book10-cover.jpg" alt="Hidden in the Shadows" class="book-cover">
+                    <div class="details">
+                        <h3>Hidden in the Shadows</h3>
+                        <p class="category">Thriller</p>
+                        <p class="category">Top Thriller Series</p>
+                        <p class="category">Author: Crime Master</p>
+                        <p class="category">Crime Drama</p>
+                        <p class="rating">★★★★★ 5 (15)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 11 -->
+            <div class="book-item" id="book11">
+                <div class="book-card">
+                    <img src="book11-cover.jpg" alt="The Great Escape" class="book-cover">
+                    <div class="details">
+                        <h3>The Great Escape</h3>
+                        <p class="category">Adventure</p>
+                        <p class="category">Adventure Series</p>
+                        <p class="category">Author: Adventure Writers</p>
+                        <p class="category">Action Drama</p>
+                        <p class="rating">★★★★☆ 4.3 (7)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 12 -->
+            <div class="book-item" id="book12">
+                <div class="book-card">
+                    <img src="book12-cover.jpg" alt="Reign of Darkness" class="book-cover">
+                    <div class="details">
+                        <h3>Reign of Darkness</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Epic Fantasy Series</p>
+                        <p class="category">Author: Dark Guild</p>
+                        <p class="category">Fantasy Drama</p>
+                        <p class="rating">★★★★★ 4.8 (10)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 13 -->
+            <div class="book-item" id="book13">
+                <div class="book-card">
+                    <img src="book13-cover.jpg" alt="Whispers of the Wind" class="book-cover">
+                    <div class="details">
+                        <h3>Whispers of the Wind</h3>
+                        <p class="category">Historical Fiction</p>
+                        <p class="category">Historical Series</p>
+                        <p class="category">Author: Old Tales</p>
+                        <p class="category">Drama</p>
+                        <p class="rating">★★★★★ 4.9 (13)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 14 -->
+            <div class="book-item" id="book14">
+                <div class="book-card">
+                    <img src="book14-cover.jpg" alt="The Kingdom Reborn" class="book-cover">
+                    <div class="details">
+                        <h3>The Kingdom Reborn</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Fantasy Epic</p>
+                        <p class="category">Author: Legendary Authors</p>
+                        <p class="category">Adventure</p>
+                        <p class="rating">★★★★☆ 4.7 (9)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 15 -->
+            <div class="book-item" id="book15">
+                <div class="book-card">
+                    <img src="book15-cover.jpg" alt="The Chosen One" class="book-cover">
+                    <div class="details">
+                        <h3>The Chosen One</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Fantasy Adventure</p>
+                        <p class="category">Author: Braveheart</p>
+                        <p class="category">Adventure</p>
+                        <p class="rating">★★★★☆ 4.2 (8)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 16 -->
+            <div class="book-item" id="book16">
+                <div class="book-card">
+                    <img src="book16-cover.jpg" alt="The Fallen Kingdom" class="book-cover">
+                    <div class="details">
+                        <h3>The Fallen Kingdom</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Epic Fantasy</p>
+                        <p class="category">Author: Dark Tales</p>
+                        <p class="category">Adventure</p>
+                        <p class="rating">★★★★☆ 4.4 (7)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 17 -->
+            <div class="book-item" id="book17">
+                <div class="book-card">
+                    <img src="book17-cover.jpg" alt="The War of the Gods" class="book-cover">
+                    <div class="details">
+                        <h3>The War of the Gods</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Mythological Series</p>
+                        <p class="category">Author: Divine Writers</p>
+                        <p class="category">Fantasy Drama</p>
+                        <p class="rating">★★★★★ 5 (10)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 18 -->
+            <div class="book-item" id="book18">
+                <div class="book-card">
+                    <img src="book18-cover.jpg" alt="The Lost Realm" class="book-cover">
+                    <div class="details">
+                        <h3>The Lost Realm</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Lost World Series</p>
+                        <p class="category">Author: Ancient Tales</p>
+                        <p class="category">Fantasy Drama</p>
+                        <p class="rating">★★★★☆ 4.6 (11)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 19 -->
+            <div class="book-item" id="book19">
+                <div class="book-card">
+                    <img src="book19-cover.jpg" alt="Tales of the Fallen Heroes" class="book-cover">
+                    <div class="details">
+                        <h3>Tales of the Fallen Heroes</h3>
+                        <p class="category">Fantasy</p>
+                        <p class="category">Epic Fantasy</p>
+                        <p class="category">Author: Heroic Sagas</p>
+                        <p class="category">Adventure</p>
+                        <p class="rating">★★★★★ 4.9 (15)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 20 -->
+            <div class="book-item" id="book20">
+                <div class="book-card">
+                    <img src="book20-cover.jpg" alt="The Secrets of the Universe" class="book-cover">
+                    <div class="details">
+                        <h3>The Secrets of the Universe</h3>
+                        <p class="category">Sci-Fi</p>
+                        <p class="category">Sci-Fi Adventure</p>
+                        <p class="category">Author: Universe Writers</p>
+                        <p class="category">Sci-Fi</p>
+                        <p class="rating">★★★★☆ 4.7 (9)</p>
+                        <a href="#" class="read-now">Read Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
