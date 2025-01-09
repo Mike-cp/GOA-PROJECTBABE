@@ -4,455 +4,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books Library</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aesthetic Cars</title>
     <style>
-        /* Overall page styles */
+        /* General Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: "Poppins", sans-serif;
+            background-color: #f3f3f3;
+            color: #222;
+            overflow-x: hidden;
         }
-        /* Navigation Menu */
+        /* Navigation Bar */
         
-        #nav {
-            background-color: #333;
-            overflow: hidden;
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         
-        #nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        nav ul {
             display: flex;
             justify-content: center;
+            list-style: none;
         }
         
-        #nav ul li {
-            display: inline;
-            padding: 14px 20px;
+        nav ul li {
+            margin: 0 15px;
         }
         
-        #nav ul li a {
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        /* Hero Section */
+        
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #f39c12;
             color: white;
             text-decoration: none;
-            font-size: 18px;
-            padding: 14px 16px;
-            display: block;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero .btn:hover {
+            background-color: #e67e22;
+        }
+        /* About Us Section */
+        
+        .about {
+            padding: 50px 20px;
+            background: #fff;
+        }
+        
+        .about h2 {
             text-align: center;
-        }
-        
-        #nav ul li a:hover {
-            background-color: #575757;
-        }
-        /* Books Section */
-        
-        #books {
-            padding: 20px;
-        }
-        
-        .books-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        /* Individual book item */
-        
-        .book-item {
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .book-item:hover {
-            transform: scale(1.05);
-        }
-        /* Book cover image */
-        
-        .book-cover {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        /* Book card details */
-        
-        .details {
-            padding: 15px;
-        }
-        
-        .details h3 {
-            margin: 0;
-            font-size: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             color: #333;
         }
         
-        .details .category {
-            font-size: 14px;
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
             color: #555;
-            margin-top: 5px;
+        }
+        /* Features Section */
+        
+        .features {
+            padding: 50px 20px;
+            background: #f9f9f9;
         }
         
-        .details .rating {
-            font-size: 14px;
-            color: #f39c12;
-            margin-top: 10px;
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
         }
         
-        .details .read-now {
+        .feature-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            font-size: 1rem;
+            color: #555;
+        }
+        /* Cars Section */
+        
+        .cars {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        
+        .cars h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        
+        .card p {
+            margin: 0 15px 15px;
+            color: #555;
+        }
+        /* Contact Us */
+        
+        .contact {
+            background-color: #222;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .contact .btn {
             display: inline-block;
-            padding: 10px 15px;
-            background-color: #3498db;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #f39c12;
             color: white;
             text-decoration: none;
+            font-size: 1rem;
             border-radius: 5px;
-            margin-top: 10px;
+            transition: background-color 0.3s ease;
         }
         
-        .details .read-now:hover {
-            background-color: #2980b9;
+        .contact .btn:hover {
+            background-color: #e67e22;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navigation Menu -->
-    <nav id="nav">
+    <!-- Navigation -->
+    <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Books</a></li>
-            <li><a href="#">Genres</a></li>
-            <li><a href="#">Authors</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="books">
-        <div class="books-container">
-            <!-- Book 1 -->
-            <div class="book-item" id="book1">
-                <div class="book-card">
-                    <img src="book1-cover.jpg" alt="The Boss's Shotgun Wedding-Full Color" class="book-cover">
-                    <div class="details">
-                        <h3>The Boss's Shotgun Wedding</h3>
-                        <p class="category">Premium Content</p>
-                        <p class="category">ScrollToons 16+ TOP HIT</p>
-                        <p class="category">Shibuciyuan / Flower / Kuaikan Comics</p>
-                        <p class="category">Romance Drama Full Color</p>
-                        <p class="rating">★★★★★ 4.2 (6)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Explore the Best Cars</h1>
+            <p>Experience the innovation and elegance of world-class automobiles.</p>
+            <a href="#cars" class="btn">Get Started</a>
+        </div>
+    </section>
 
-            <!-- Book 2 -->
-            <div class="book-item" id="book2">
-                <div class="book-card">
-                    <img src="book2-cover.jpg" alt="The Boss's Shotgun Wedding-Full Color" class="book-cover">
-                    <div class="details">
-                        <h3>The Boss's Shotgun Wedding</h3>
-                        <p class="category">Premium Content</p>
-                        <p class="category">ScrollToons 16+ TOP HIT</p>
-                        <p class="category">Shibuciyuan / Flower / Kuaikan Comics</p>
-                        <p class="category">Romance Drama Full Color</p>
-                        <p class="rating">★★★★★ 4.2 (6)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
+    <!-- About Us -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are passionate about automobiles and dedicated to bringing you the latest models, innovations, and detailed information about the world's best cars. Join us as we explore the journey of luxury, power, and performance.</p>
+    </section>
 
-            <!-- Book 3 -->
-            <div class="book-item" id="book3">
-                <div class="book-card">
-                    <img src="book3-cover.jpg" alt="The King’s Secret" class="book-cover">
-                    <div class="details">
-                        <h3>The King’s Secret</h3>
-                        <p class="category">Fantasy Adventure</p>
-                        <p class="category">Top Fantasy Series</p>
-                        <p class="category">Author: Fantasy Guild</p>
-                        <p class="category">Action Drama Full Color</p>
-                        <p class="rating">★★★★☆ 4.5 (8)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-container">
+            <div class="feature">
+                <h3>Top Brands</h3>
+                <p>Access the most trusted and renowned car brands in the world.</p>
             </div>
-
-            <!-- Book 4 -->
-            <div class="book-item" id="book4">
-                <div class="book-card">
-                    <img src="book4-cover.jpg" alt="Mystery of the Lost Realm" class="book-cover">
-                    <div class="details">
-                        <h3>Mystery of the Lost Realm</h3>
-                        <p class="category">Mystery Thriller</p>
-                        <p class="category">Mystery Classics Collection</p>
-                        <p class="category">Author: Detective Stories</p>
-                        <p class="category">Thriller Drama</p>
-                        <p class="rating">★★★★★ 4.7 (10)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
+            <div class="feature">
+                <h3>Expert Reviews</h3>
+                <p>Detailed reviews from experts to help you make the right choice.</p>
             </div>
-
-            <!-- Book 5 -->
-            <div class="book-item" id="book5">
-                <div class="book-card">
-                    <img src="book5-cover.jpg" alt="Love in the City" class="book-cover">
-                    <div class="details">
-                        <h3>Love in the City</h3>
-                        <p class="category">Romantic Comedy</p>
-                        <p class="category">City Love Series</p>
-                        <p class="category">Author: Urban Writers</p>
-                        <p class="category">Romantic Drama</p>
-                        <p class="rating">★★★★☆ 4.3 (5)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 6 -->
-            <div class="book-item" id="book6">
-                <div class="book-card">
-                    <img src="book6-cover.jpg" alt="City of Secrets" class="book-cover">
-                    <div class="details">
-                        <h3>City of Secrets</h3>
-                        <p class="category">Urban Fantasy</p>
-                        <p class="category">Top Urban Series</p>
-                        <p class="category">Author: City Mysteries</p>
-                        <p class="category">Fantasy Drama</p>
-                        <p class="rating">★★★★☆ 4.5 (7)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 7 -->
-            <div class="book-item" id="book7">
-                <div class="book-card">
-                    <img src="book7-cover.jpg" alt="The Last Kingdom" class="book-cover">
-                    <div class="details">
-                        <h3>The Last Kingdom</h3>
-                        <p class="category">Historical Fiction</p>
-                        <p class="category">Epic Series</p>
-                        <p class="category">Author: History Books</p>
-                        <p class="category">Historical Drama</p>
-                        <p class="rating">★★★★★ 5 (12)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 8 -->
-            <div class="book-item" id="book8">
-                <div class="book-card">
-                    <img src="book8-cover.jpg" alt="The Silent Sea" class="book-cover">
-                    <div class="details">
-                        <h3>The Silent Sea</h3>
-                        <p class="category">Sci-Fi Adventure</p>
-                        <p class="category">Top Sci-Fi Collection</p>
-                        <p class="category">Author: Space Adventures</p>
-                        <p class="category">Action Sci-Fi</p>
-                        <p class="rating">★★★★☆ 4.4 (9)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 9 -->
-            <div class="book-item" id="book9">
-                <div class="book-card">
-                    <img src="book9-cover.jpg" alt="Love at First Sight" class="book-cover">
-                    <div class="details">
-                        <h3>Love at First Sight</h3>
-                        <p class="category">Romance</p>
-                        <p class="category">Top Romance Series</p>
-                        <p class="category">Author: Love Stories</p>
-                        <p class="category">Romantic Drama</p>
-                        <p class="rating">★★★★☆ 4.6 (11)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 10 -->
-            <div class="book-item" id="book10">
-                <div class="book-card">
-                    <img src="book10-cover.jpg" alt="Hidden in the Shadows" class="book-cover">
-                    <div class="details">
-                        <h3>Hidden in the Shadows</h3>
-                        <p class="category">Thriller</p>
-                        <p class="category">Top Thriller Series</p>
-                        <p class="category">Author: Crime Master</p>
-                        <p class="category">Crime Drama</p>
-                        <p class="rating">★★★★★ 5 (15)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 11 -->
-            <div class="book-item" id="book11">
-                <div class="book-card">
-                    <img src="book11-cover.jpg" alt="The Great Escape" class="book-cover">
-                    <div class="details">
-                        <h3>The Great Escape</h3>
-                        <p class="category">Adventure</p>
-                        <p class="category">Adventure Series</p>
-                        <p class="category">Author: Adventure Writers</p>
-                        <p class="category">Action Drama</p>
-                        <p class="rating">★★★★☆ 4.3 (7)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 12 -->
-            <div class="book-item" id="book12">
-                <div class="book-card">
-                    <img src="book12-cover.jpg" alt="Reign of Darkness" class="book-cover">
-                    <div class="details">
-                        <h3>Reign of Darkness</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Epic Fantasy Series</p>
-                        <p class="category">Author: Dark Guild</p>
-                        <p class="category">Fantasy Drama</p>
-                        <p class="rating">★★★★★ 4.8 (10)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 13 -->
-            <div class="book-item" id="book13">
-                <div class="book-card">
-                    <img src="book13-cover.jpg" alt="Whispers of the Wind" class="book-cover">
-                    <div class="details">
-                        <h3>Whispers of the Wind</h3>
-                        <p class="category">Historical Fiction</p>
-                        <p class="category">Historical Series</p>
-                        <p class="category">Author: Old Tales</p>
-                        <p class="category">Drama</p>
-                        <p class="rating">★★★★★ 4.9 (13)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 14 -->
-            <div class="book-item" id="book14">
-                <div class="book-card">
-                    <img src="book14-cover.jpg" alt="The Kingdom Reborn" class="book-cover">
-                    <div class="details">
-                        <h3>The Kingdom Reborn</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Fantasy Epic</p>
-                        <p class="category">Author: Legendary Authors</p>
-                        <p class="category">Adventure</p>
-                        <p class="rating">★★★★☆ 4.7 (9)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 15 -->
-            <div class="book-item" id="book15">
-                <div class="book-card">
-                    <img src="book15-cover.jpg" alt="The Chosen One" class="book-cover">
-                    <div class="details">
-                        <h3>The Chosen One</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Fantasy Adventure</p>
-                        <p class="category">Author: Braveheart</p>
-                        <p class="category">Adventure</p>
-                        <p class="rating">★★★★☆ 4.2 (8)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 16 -->
-            <div class="book-item" id="book16">
-                <div class="book-card">
-                    <img src="book16-cover.jpg" alt="The Fallen Kingdom" class="book-cover">
-                    <div class="details">
-                        <h3>The Fallen Kingdom</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Epic Fantasy</p>
-                        <p class="category">Author: Dark Tales</p>
-                        <p class="category">Adventure</p>
-                        <p class="rating">★★★★☆ 4.4 (7)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 17 -->
-            <div class="book-item" id="book17">
-                <div class="book-card">
-                    <img src="book17-cover.jpg" alt="The War of the Gods" class="book-cover">
-                    <div class="details">
-                        <h3>The War of the Gods</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Mythological Series</p>
-                        <p class="category">Author: Divine Writers</p>
-                        <p class="category">Fantasy Drama</p>
-                        <p class="rating">★★★★★ 5 (10)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 18 -->
-            <div class="book-item" id="book18">
-                <div class="book-card">
-                    <img src="book18-cover.jpg" alt="The Lost Realm" class="book-cover">
-                    <div class="details">
-                        <h3>The Lost Realm</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Lost World Series</p>
-                        <p class="category">Author: Ancient Tales</p>
-                        <p class="category">Fantasy Drama</p>
-                        <p class="rating">★★★★☆ 4.6 (11)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 19 -->
-            <div class="book-item" id="book19">
-                <div class="book-card">
-                    <img src="book19-cover.jpg" alt="Tales of the Fallen Heroes" class="book-cover">
-                    <div class="details">
-                        <h3>Tales of the Fallen Heroes</h3>
-                        <p class="category">Fantasy</p>
-                        <p class="category">Epic Fantasy</p>
-                        <p class="category">Author: Heroic Sagas</p>
-                        <p class="category">Adventure</p>
-                        <p class="rating">★★★★★ 4.9 (15)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 20 -->
-            <div class="book-item" id="book20">
-                <div class="book-card">
-                    <img src="book20-cover.jpg" alt="The Secrets of the Universe" class="book-cover">
-                    <div class="details">
-                        <h3>The Secrets of the Universe</h3>
-                        <p class="category">Sci-Fi</p>
-                        <p class="category">Sci-Fi Adventure</p>
-                        <p class="category">Author: Universe Writers</p>
-                        <p class="category">Sci-Fi</p>
-                        <p class="rating">★★★★☆ 4.7 (9)</p>
-                        <a href="#" class="read-now">Read Now</a>
-                    </div>
-                </div>
+            <div class="feature">
+                <h3>Latest Models</h3>
+                <p>Stay updated with the latest car models and their features.</p>
             </div>
         </div>
     </section>
+
+    <!-- Cars Section -->
+    <section class="cars" id="cars">
+        <h2>Our Featured Cars</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Car 1">
+                <h3>BMW X7</h3>
+                <p>Luxury SUV with unparalleled elegance and performance.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Car 2">
+                <h3>Audi Q8</h3>
+                <p>Experience the combination of technology and style.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Car 3">
+                <h3>Mercedes-Benz S-Class</h3>
+                <p>A masterpiece of innovation, luxury, and comfort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us for inquiries about cars, reviews, or anything else. We'd love to help!</p>
+        <a href="mailto:info@aestheticcars.com" class="btn">Email Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Aesthetic Cars. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
