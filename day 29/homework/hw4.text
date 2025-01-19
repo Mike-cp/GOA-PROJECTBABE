@@ -1,0 +1,7 @@
+Inline styles: style="color: red"
+ID სელექტორი: #header
+Class სელექტორი: .menu
+Tag სელექტორი: div
+Universal სელექტორი: *
+
+This is hiercy frist one is greater then second

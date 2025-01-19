@@ -1,0 +1,24 @@
+#but1 {
+    color: #8e079c;
+}
+
+#but2 {
+    color: #d44a70;
+}
+
+#but3 {
+    color: #098f1d;
+}
+
+.parent {
+    width: 70%;
+    background-color: #8B0000;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.child {
+    width: 25%;
+    background-color: #4682B4;
+    height: 100px;
+}

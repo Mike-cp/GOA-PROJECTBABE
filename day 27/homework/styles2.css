@@ -1,0 +1,11 @@
+h1,
+p,
+button {
+    color: blue;
+    text-align: center;
+}
+
+button {
+    background-color: yellow;
+    border: 1px solid black;
+}
