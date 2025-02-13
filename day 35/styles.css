@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: #0077cc;
+    transition: 0.3s;
+}
+
+.link:hover {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 69, 0);
+}
+
+.link:active {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #6a0dad;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 5px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #d4edda;
+}

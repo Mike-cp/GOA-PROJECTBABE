@@ -3,6 +3,6 @@ word = input("Enter character(word): ")
 word_appear = text.count(word)
 
 if word_appear != -1:
-    print("the word appeared in your text",word_appear)
+    print("the word appeared in your text",word_appear,"times")
 else:
     print("The word has not been apeared in the text")

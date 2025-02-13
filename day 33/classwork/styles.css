@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    background-color: white;
+}
+
+.hello {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.world {
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.goal {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.oriented {
+    font-size: 20px;
+}
+
+.academy {
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.is {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.best {
+    text-decoration: underline;
+    font-size: 24px;
+    color: grey;
+}
+
+.the {
+    text-decoration: underline;
+    color: green;
+    font-size: 18px;
+}
+
+.one {
+    font-size: 18px;
+}

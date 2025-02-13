@@ -1,4 +1,5 @@
 def finder(string, Findword):
+    
     index = string.find(Findword)
 
     if Findword != -1:
