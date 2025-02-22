@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+}
+
+ul :nth-child(even) {
+    background-color: aqua;
+}
+
+ul :nth-child(3n) {
+    color: red;
+}
+
+ul {
+    list-style-image: url(risa.ico);
+}
+
+ul :first-child {
+    font-weight: bold;
+}
+
+ul :last-child {
+    font-weight: bold;
+}

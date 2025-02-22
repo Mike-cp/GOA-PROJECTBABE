@@ -1,0 +1,36 @@
+a {
+    color: #FF5733;
+}
+
+a:visited {
+    color: #900C3F;
+}
+
+a:hover {
+    color: #C70039;
+}
+
+a:active {
+    color: #581845;
+}
+
+
+/*-------------------------*/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #900C3F;
+}
+
+a {
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}

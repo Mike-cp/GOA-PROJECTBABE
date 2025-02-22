@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+#main {
+    font-style: normal;
+    background-color: #019879;
+    font-weight: bold;
+    color: #edfbfe;
+}
+
+table tr td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
