@@ -1,0 +1,7 @@
+display - Definition and Usage The display property specifies the display behavior (the type of rendering box) of an element.
+
+justify content - defines how the browser distributes space between and around content items along the main axis of a flex container and the inline axis of grid and multicol containers.
+
+Aligin items - how the items are suppose to behavior
+
+flex direction - is a thing that makes items aligin in horizontal way or vertical , row or column

@@ -1,0 +1,60 @@
+.topmain{
+    width: 1534px;
+    height: 40px;
+    background-color: #142038;
+    position: relative;
+    bottom: 7px;
+    right: 6px;
+    
+}
+.topmain img{
+    width: 60px;
+    height: auto;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+.topmain span{
+    font-family:sans-serif;
+    color: white;
+    font-size: 16px;
+    padding: 30px;
+    position: relative;
+    top: 10px;
+    left: 60px;
+    bottom: 10px;
+}
+span{
+    font-family:sans-serif;
+}
+
+.desc{
+    background-image: url(image\ copy\ 2.png);
+    background-position: center;
+    background-color: #5D0909;
+    image-rendering: auto;
+    width: 2000px; 
+    margin: 0 auto;
+
+
+}
+.desc img{
+    height: 350px;
+    position: relative;
+    align-items: center;
+    left: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%; /* Make the body take up full width */
+    height: 100vh; /* Set the body to take up the full height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+

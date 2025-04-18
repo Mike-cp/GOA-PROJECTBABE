@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        
+        .left-sidebar {
+            background-color: #2ecc71;
+            color: white;
+            padding: 20px;
+            width: 200px;
+        }
+        
+        .main-content {
+            background-color: #ecf0f1;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .right-sidebar {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px;
+            width: 200px;
+        }
+        
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        HEADER
+    </header>
+    
+    <div class="container">
+        <aside class="left-sidebar">
+            LEFT SIDEBAR
+        </aside>
+        
+        <main class="main-content">
+            MAIN CONTENT
+        </main>
+        
+        <aside class="right-sidebar">
+            RIGHT SIDEBAR
+        </aside>
+    </div>
+    
+    <footer>
+        FOOTER
+    </footer>
+</body>
+</html>

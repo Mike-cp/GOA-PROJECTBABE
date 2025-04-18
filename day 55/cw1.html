@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyframes Animation</title>
+  <style>
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+        background-color: lightblue;
+      }
+      100% {
+        transform: translateX(200px);
+        background-color: lightcoral;
+      }
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      animation: slide 5s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    #header {
+      background-color: green;
+      display: flex;
+      height: 150px;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      color: white;
+    }
+
+    .main {
+      display: flex;
+      height: 300px;
+    }
+
+    #article {
+      background-color: black;
+      color: white;
+      flex: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #aside {
+      background-color: gray;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #nav {
+      background-color: lightblue;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #footer {
+      background-color: green;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">Header</div>
+
+  <div class="main">
+    <div id="nav">Nav</div>
+    <div id="article">Article</div>
+    <div id="aside">Aside</div>
+  </div>
+
+  <div id="footer">Footer</div>
+
+</body>
+</html>

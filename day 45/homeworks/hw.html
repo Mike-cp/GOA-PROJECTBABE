@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Tasks</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;              /* Task 3: items in a row */
+      align-items: flex-start;          /* Task 6: top aligned */
+      justify-content: space-between;   /* Task 5: space between items */
+      gap: 10px;
+      height: 300px;
+      flex-wrap: wrap;                  /* Task 7: wrap to next line */
+      border: 2px solid #444;
+    }
+
+    .item {
+      background-color: #009688;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;                     /* Task 10: equal width */
+      height: 100px;
+      flex: 1;                          /* Task 9: equal growth */
+    }
+
+    .item.special {
+      align-self: flex-end;             /* Task 6: this one moves to bottom */
+    }
+
+    .grow-twice {
+      flex: 2;                          /* Task 4: grows twice as much */
+    }
+
+    /* Task 8: center items both ways (alternative container) */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      border: 2px dashed #888;
+      margin-top: 30px;
+    }
+
+    /* Task 11: column direction (alternative container) */
+    .column-container {
+      display: flex;
+      flex-direction: column;          /* Task 11: vertical column */
+      gap: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tasks 3–7, 9, 10 -->
+  <div class="container">
+    <div class="item grow-twice">1</div>
+    <div class="item">2</div>
+    <div class="item special">3</div>
+  </div>
+
+  <!-- Task 8: center all items -->
+  <div class="centered-container">
+    <div class="item">Centered</div>
+  </div>
+
+  <!-- Task 11: column direction -->
+  <div class="column-container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+  </div>
+
+</body>
+</html>
