@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #garden {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    "one one two two"
+    "one one two two"
+    "three three four five"
+    "six six four five";
+  gap: 10px;
+  padding: 20px;
+  background: #2e003e;
+}
+
+#garden div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 15px;
+}
+
+/* Assign each grid area */
+#garden div:nth-child(1) { grid-area: one; background: #35a88b; }
+#garden div:nth-child(2) { grid-area: two; background: #44c2d3; }
+#garden div:nth-child(3) { grid-area: three; background: #c568a8; }
+#garden div:nth-child(4) { grid-area: four; background: #b0624c; }
+#garden div:nth-child(5) { grid-area: five; background: #3d5c5c; }
+#garden div:nth-child(6) { grid-area: six; background: #6e665e; }
+
+
+    
+</style>
+<body>
+    <div id="garden">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

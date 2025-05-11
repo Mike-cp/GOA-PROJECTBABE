@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>საკლასო დავალება</title>
+</head>
+<body>
+
+  <button id="button-main">meravi</button>
+
+  <h1 id="color">hello</h1>
+
+
+  <button id="button-main">დააკლიკე</button>
+  <p id="p-main">ეს არის პარაგრაფი</p>
+  <script>
+
+    const button = document.getElementById('button-main');
+    button.textContent = 'მიკა';
+
+    let color = document.getElementById('color')
+    color.style.backgroundColor = "black"
+    color.style.color = "red"
+    color.style.fontSize = "300px"
+    color.style.borderRadius = "30px"
+
+const button = document.getElementById('button-main');
+const paragraph = document.getElementById('p-main');
+
+button.style.backgroundColor = 'purple';
+button.style.color = 'white';
+
+paragraph.style.fontSize = '20px';
+paragraph.textContent = 'ახალი ტექსტი პარაგრაფისთვის';
+
+  </script>
+
+</body>
+</html>

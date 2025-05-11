@@ -1,60 +1,671 @@
-.topmain{
-    width: 1534px;
-    height: 40px;
-    background-color: #142038;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+#nav1 {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  background-color: #142038;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 13px;
+  z-index: 14;
+}
+
+#nav1 img {
+  height: 28px;
+  padding-left: 15px;
+
+}
+
+#nav2 {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #0f1010;
+  z-index: 15;
+}
+
+#video .video-detail{
     position: relative;
-    bottom: 7px;
-    right: 6px;
+    bottom: 50px;
+}
+
+#nav2 img {
+  height: 50px;
+  padding-left: 15px;
+}
+
+#video video {
+    
+    position: absolute;
+    height: 855px;
+    width: max-content; /* This can cause overflow if the content inside exceeds the viewport width */
+
+
+
+}
+
+
+.tag {
+  padding: 0 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tag span {
+  color: white;
+  font-weight: 700;
+}
+
+/* Full height hover background */
+.tag:hover {
+  background-color: #2d3441;
+}
+
+/* Special yellow button for email */
+.email {
+  background-color: #ffcd00;
+}
+
+.email span {
+  color: black;
+}
+
+.email:hover {
+  background-color: #e6b800;
+}
+
+#nav1 {
+    display: flex;
+    align-items: stretch; /* important */
+    height: 48px; /* fixes height so children can fill it */
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%; /* full height */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #2d3441;
+}
+
+.email {
+    background-color: #ffcd00;
+}
+
+.email span {
+    color: black;
+}
+
+.email:hover {
+    background-color: #e6b800;
+}
+
+#information_pannel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-image: url(image\ copy\ 2.png);
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  width: 100vw;           /* Full viewport width */
+  height: 100vh;          /* Full viewport height */
+  overflow: hidden;  
+  background-size: cover;     /* makes it fill the div while keeping aspect ratio */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  height: 1100px;
+  width: 100%;
+  background-color: #5D0909;
+
+}
+
+#information_pannel img{
+    height: 350px;
+}
+
+
+#video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 96px; /* Adjust based on nav1 + nav2 height */
+  overflow: hidden;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the whole area */
+    z-index: -1; /* Keep the video behind the images */
+}
+
+.image-top,
+.image-bottom {
+    position: absolute;
+    object-fit: contain; /* Adjust this depending on how you want the images to fit */
+}
+
+.image-top {
+    position: absolute;
+    left: 280px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Place this above the video */
+}
+
+.image-bottom {
+   width: 100%; /* Make the image fill the container's width */
+  height: 100%; /* Make the image fill the container's height */
+  object-fit: cover;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#nav1 {
+    
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #142038;
+    z-index: 10;
+    padding: 10px 0;
+    height: 50px; /* Adjust this height as per your navbar */
+}
+
+#nav1, #nav2 {
+    z-index: 15;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    height: 50px;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 1; /* Initially fully opaque */
+}
+
+#nav1 {
+    top: 0;
+    background-color: #142038;
+    z-index: 10;
+}
+
+#nav2 {
+    top: 50px; /* Adjust based on #nav1 height */
+    background-color: #18191a;
+    z-index: 9;
+    padding: 30px;
+}
+
+.title{
+    position: absolute;
+    bottom: 10%; /* Adjust based on where you want it */
+    left: 50px;
+    top: 210px;
+    /* Adjust to position it as needed */
+    width: auto; /* Control the image size */
+    height: 300px;
+    z-index: 3; /* Keep image above video and other content */
+}
+
+.image-top {
+  bottom:100px /* same as nav height */
+}
+
+
+
+
+.background-video {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-detail{
+    height: 700px;
+    width: auto;
     
 }
-.topmain img{
-    width: 60px;
-    height: auto;
-    position: relative;
-    left: 20px;
-    top: 10px;
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%; /* Ensure the body width is 100% of the viewport */
+  height: 100%; /* Ensure the body height is 100% of the viewport */
 }
 
-.topmain span{
-    font-family:sans-serif;
+.video-detail{
+    width: 100%; /* Make the image take up the full width of the div */
+  height: 100%; /* Make the image take up the full height of the div */
+   /* Ensures the image fits exactly, might distort aspect ratio */
+  display: block;
+  bottom: 30px;
+  
+}
+.video-details{
+  width: 100%;
+  height: 80px;
+  object-fit: cover;   /* Or 'fill' if you don't care about aspect ratio */
+  display: block;
+  transform: scaleX(-1);  /* This flips the image horizontally */
+  object-position: top; 
+}
+
+.video-details{
+    position: relative;
+    top: 5px;
+    z-index: 14;
+}
+
+
+
+#section3{
+    background-color: #2d3441;
+    height: 1700px;
+}
+
+.video-container {
+    bottom: 900px;
+  position: relative;
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto;
+  border: 5px solid #ca0f0f; /* Border around the container */
+  border-radius: 15px; /* Rounded corners for the border */
+  overflow: hidden; /* To prevent overflow of the video and buttons */
+  background-color: #000; /* Background color for the container */
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 90%; /* Makes the video a little bigger */
+  max-width: 1000px; /* Max width limit for the video */
+  border-radius: 10px; /* Optional: Rounded corners for the video */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button img {
+  width: 40px; /* Adjust the size of the arrow images */
+  height: 40px;
+}
+
+#background{
+    height: 1100px;
+    
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('purchase-bg.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This makes the background stay in place while scrolling */
+  background-repeat: no-repeat;
+}
+
+#information_pannel{
+    margin-bottom: 50px;
+    
+    
+    
+}
+
+
+.character-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.character-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 3px dashed #ccc;
+  padding-bottom: 30px;
+}
+
+.character-block img {
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.character-info h2 {
+  font-size: 2.2em;
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.character-info p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Navbar styles */
+
+
+
+#video video{
+    position: absolute;
+    top: 0px;
+}
+
+#video .video-detail{
+    bottom: 0px;
+}
+
+.image-bottom{
+    top: 0px;
+}
+
+.video-details{
+    top: 0px;
+    height: 1000px;
+    z-index: index 13;;
+}
+
+#video text{
+    position: absolute;
+    top: 550px;
+    font-size: 40px;
+    left: 190px;
+    z-index: 14;
     color: white;
-    font-size: 16px;
-    padding: 30px;
+    
+}
+
+#image{
+    position: absolute;
+    top: 530px;
+    left: 100px;
+    z-index: 14;
+    color: white;
+    height: 80px;
+    width: 500px;
+
+}
+
+#video text {
+  font-family: 'Bangers', sans-serif; /* comic-style, close to Sonic feel */
+  font-size: 3rem;
+  color: rgb(193, 193, 189);
+  text-transform: uppercase;
+  text-shadow: 
+    -2px -2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px  2px 0 #000, 
+     2px  2px 0 #000; /* strong outline */
+  letter-spacing: 1px;
+  transition: transform 0.2s ease;
+}
+
+#video text:hover {
+  transform: scale(1.05);
+  color: yellow;
+}
+
+#information_pannel{
+    gap:50px;
+    height: 2000px;
+    top: 50px;
+}
+#information_pannel img{
+    gap: 50px;
+    bottom: 40px;
+    top: 40px;
+}
+
+#information_pannel text{
+    display: inline-block;
+     font-family: 'Bangers', sans-serif; /* comic-style, close to Sonic feel */
+  font-size: 6rem;
+  color: rgb(193, 193, 189);
+  text-transform: uppercase;
+  text-shadow: 
+    -2px -2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px  2px 0 #000, 
+     2px  2px 0 #000; /* strong outline */
+  letter-spacing: 1px;
+  transform: rotate(-15deg);
+  margin-right: 800px;
+  
+
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#spikes {
+  position: relative;
+  bottom: 30px;
+  border-top: 30px solid transparent;
+  border-image: url('shadow-border-feature-top.png') 30 repeat;  /* Apply spike image to the border */
+  z-index: 1;
+}
+
+
+
+#spikes1{
     position: relative;
-    top: 10px;
-    left: 60px;
-    bottom: 10px;
+    bottom: 120px;
+    border-top: 30px solid transparent;
+    border-image: url('shadow-media-border-top.png') 30 repeat;
+    z-index: 1;
 }
-span{
-    font-family:sans-serif;
+#section3{
+    background-color: #474747;
+    height: 1000px;
+    overflow: hidden;
 }
 
-.desc{
-    background-image: url(image\ copy\ 2.png);
-    background-position: center;
-    background-color: #5D0909;
-    image-rendering: auto;
-    width: 2000px; 
-    margin: 0 auto;
 
+#MEDIA{
+    display: inline-block;
+     font-family: 'Bangers', sans-serif; /* comic-style, close to Sonic feel */
+  font-size: 6rem;
+  color: rgb(193, 193, 189);
+  text-transform: uppercase;
+  text-shadow: 
+    -2px -2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px  2px 0 #000, 
+     2px  2px 0 #000; /* strong outline */
+  letter-spacing: 1px;
+  transform: rotate(-15deg);
+  margin-right: 400px;
 
 }
-.desc img{
-    height: 350px;
-    position: relative;
+
+#transport{
+    position: fixed;
+    display: flex;
     align-items: center;
-    left: 200px;
+    justify-content: end;
+    justify-content: center;
+    z-index: 14;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50px;              
+  border-top-right-radius: 0; 
+  right: 0px;
+  bottom: 20px;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(5, 192, 255, 0.2));
+
+
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+#around{
+    border-left: solid transparent;
+    border-color: rgb(0, 0, 0);
+}
 
-  body {
-    width: 100%; /* Make the body take up full width */
-    height: 100vh; /* Set the body to take up the full height */
-    overflow-x: hidden; /* Prevent horizontal scroll */
-  }
 
+
+#backgrnd{
+    position: relative;
+    background-color: #52AAF7;
+    bottom: 100px;
+    top: 100px;
+    justify-content: center;
+
+}
+
+#backgrnd img{
+    position:relative;
+    left: 570px;
+    height: 550px;
+    top: 120px;
+    z-index: 1;
+}
+
+#backgrnd #textk{
+    position: relative;
+    display: inline-block;
+     font-family: 'Bangers', sans-serif; /* comic-style, close to Sonic feel */
+  font-size: 4rem;
+  color: rgb(193, 193, 189);
+  text-transform: uppercase;
+  text-shadow: 
+    -2px -2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px  2px 0 #000, 
+     2px  2px 0 #000; /* strong outline */
+  letter-spacing: 1px;
+  transform: rotate(-15deg);
+  left: 300px;
+  bottom: 230px;
+}
+
+#backgrnd #maintext{
+    position: relative;
+    font-family:Comic Sans MS;
+    left: 450px;
+    display: inline-block;
+  display: inline-block;
+  padding: 16px;
+  background-color: #1008a2;
+  border: 1px solid #1402bc;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+              -2px -2px 5px rgba(4, 4, 169, 0.7);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  font-family: sans-serif;
+  line-height: 1.6;
+  bottom: 210px;
+  font-size: 1rem;
+
+}
+
+
+#backgrnd {
+  position: relative;
+  padding: 20px;
+  background-color: #1e3a8a; /* Blue background */
+  overflow: hidden;
+}
+
+#backgrnd::before,
+#backgrnd::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30px; /* Adjust the height of the wave */
+  background: #1e3a8a; /* Blue background color to match */
+  left: 0;
+}
+
+#backgrnd::before {
+  top: -15px; /* Moves the wave up */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,0 C20,10 40,0 60,10 C80,20 100,10 120,20 L100 0 Z" fill="#1e3a8a" /></svg>') repeat-x; /* The wave SVG */
+  animation: waveMove 1.5s linear infinite;
+}
+
+#backgrnd::after {
+  bottom: -15px; /* Moves the wave down */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,0 C20,10 40,0 60,10 C80,20 100,10 120,20 L100 0 Z" fill="#1e3a8a" /> </svg>') repeat-x;
+  animation: waveMove 1.5s linear infinite reverse;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px); /* Adjust this value for wave movement speed */
+  }
+}
+
+a { color: #ffffff; text-decoration: none; }
+
+html {
+  scroll-behavior: smooth;
+}

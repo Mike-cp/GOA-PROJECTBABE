@@ -7,18 +7,218 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <div class="topmain">
+
+  <div id="around">
+    <div id="transport">
+        <a href="sonic.html">
+            <img style="height: 100px;" src="logo-sonic.png">
+            <img  style= "height: 70px;" src="sonic-selector.gif">
+        </a>
+    </div>
+   </div>
+<div id="all_nav">
+   <div id="nav1">
     <img src="image.png">
-    <span>Games</span>
-    <span>News</span>
-    <span>Shop</span>
-    <span>Characters</span>
-   </div>
-   <div class="desc">
-    <img src="image copy 4.png" alt="">
-    <img src="image copy 5.png">
-    <img src="image copy 6.png">
-   </div>
+    <div class="tag">
+        <a href="#game"><span>GAMES</span></a>
+    </div>
+    <div class="tag">
+        <span>STORE</span>
+    </div>
+    <div class="tag">
+        <a href="#character-wrapper"><span>CHARACTERS</span></a>
+    </div>
+    <div class="tag email">
+        <span>EMAIL SIGN UP</span>
+    </div>
+</div>
+
+    <div id="nav2">
+        <img src="image copy 7.png">
+        <a href="#information_pannel"><span>WHAT`s NEW</span></a>
+        <span>GAMES</span>
+        <span>SHOP</span>
+    </div>
+</div>
+    <div id="video-container">
+  <!-- Spiky Top Border -->
+  <div class="spiky-border top"></div>
+  
+  <div id="video">
+    <img src="image copy 10.png" class="image-bottom">
+    <img src="image copy 12.png" class="image-top">
+    <img src="image copy.png" class="video-detail">
+    <img src="top-desktop.png" class="video-details">
+    <img src="image copy 9.png" class="title">
+    <video src="SONIC X SHADOW GENERATIONS - Launch Trailer.mp4" autoplay loop muted class="background-video"></video>
+    <img id="image" src="image copy 17.png">
+    <text>WATCH TRAILER</text>
+  </div>
+  
+  <!-- Spiky Bottom Border -->
+  <div class="spiky-border bottom"></div>
+</div>
+    <div id="spikes">
+    <div id="information_pannel">
+        <text>NEW FEATURES!</text>
+        <img src="image copy 5.png">
+        <img style="padding-left: 60px;" src="image copy 6.png">
+        <img src="image copy 4.png">
+    </div>
+    </div>
+    <div id="spikes1">
+
+    <div id="section3">
+        <text id="MEDIA">MEDIA</text>
+        <img id="background"  src="shadow-media-bg.png">
+        <div class="video-container">
+  <button class="prev" onclick="switchVideo('prev')">
+    <img src="image copy 13.png" alt="Previous">
+  </button>
+
+  <div class="video-wrapper">
+    <video id="video1" class="video" autoplay controls>
+      <source src="SONIC X SHADOW GENERATIONS - Launch Trailer.mp4" type="video/mp4">
+    </video>
+
+    <video id="video2" class="video" autoplay controls style="display: none;">
+      <source src="Sonic Rumble – Skill up and show off!.mp4" type="video/mp4">
+    </video>
+
+    <video id="video3" class="video" autoplay controls style="display: none;">
+      <source src="SONIC X SHADOW GENERATIONS - Story Trailer.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <button class="next" onclick="switchVideo('next')">
+    <img src="image copy 11.png" alt="Next">
+  </button>
+</div>
+  </div>
+</div>
+
+  <div class="character-wrapper">
+  <div class="character-block">
+    <img src="image copy 20.png" alt="Sonic">
+    <div class="character-info">
+      <h2>Sonic</h2>
+      <p>Sonic – The fastest hedgehog alive! He’s cool, brave, and always ready to stop bad guys. Sonic loves adventure, freedom, and of course… chili dogs!</p>
+    </div>
+  </div>
+
+  <div class="character-block">
+    <img src="image copy 19.png" alt="Tails">
+    <div class="character-info">
+      <h2>Shadow</h2>
+      <p>Shadow – Sonic’s powerful rival and sometimes ally. Created as the Ultimate Life Form, he’s serious, strong, and can use Chaos Control to teleport or slow time. Though he acts tough, deep down he cares about protecting the world in his own way.</p>
+    </div>
+  </div>
+
+  <div class="character-block">
+    <img src="image copy 18.png" alt="Knuckles">
+    <div class="character-info">
+      <h2>EggHead</h2>
+      <p>Dr. Eggman – Also known as "Egghead" by Sonic, he's a genius scientist and Sonic’s main enemy. He builds robots and machines to try and take over the world, but his plans always get foiled!</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    </div>
+
+    <footer>
+        <div id="backgrnd">
+        <text id="textk">MADE BY MIKA!</text>
+        <img src="image copy 25.png" alt="">
+        <div id="border-text">
+        <div id="maintext">
+  <b>Hi there! I'm Mika, and I'm super excited to share this website with you.<br>
+  I built it out of love for everything Sonic — from the classic games<br>
+  to the cool characters we all know and love! 💙<br></b>
+
+  <text style="font-size: 13px;">This site is a fun space where fans like you can explore,<br>
+  enjoy character cards, and dive into the fast-paced universe of Sonic.<br>
+  Whether you're a longtime fan or just getting started,<br>
+  there's something here for everyone.</text>
+</div>
+</div>
+
+        </div>
+
+    </footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const nav1 = document.getElementById('nav1');
+    const nav2 = document.getElementById('nav2');
+    const scrollPosition = window.scrollY; // Get the current scroll position
+
+    if (scrollPosition > 100) { // Change this value as needed
+        nav1.style.opacity = '0.7'; // Set opacity to 70% for #nav1 when scrolling down
+        nav2.style.opacity = '0.7'; // Set opacity to 70% for #nav2 when scrolling down
+    } else {
+        nav1.style.opacity = '1'; // Set opacity back to 100% for #nav1 when near the top
+        nav2.style.opacity = '1'; // Set opacity back to 100% for #nav2 when near the top
+    }
+});
+
+let currentVideoIndex = 0;
+const videos = document.querySelectorAll('.video');
+
+function switchVideo(direction) {
+  videos[currentVideoIndex].style.display = 'none'; // Hide the current video
+
+  if (direction === 'next') {
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length; // Move to next video (loop back)
+  } else if (direction === 'prev') {
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; // Move to previous video (loop back)
+  }
+
+  videos[currentVideoIndex].style.display = 'block'; // Show the new video
+}
+
+
+  // Get the nav elements
+  const nav1 = document.getElementById('nav1');
+  const nav2 = document.getElementById('nav2');
+  const threshold = 200; // You can adjust this value based on when you want the navbars to become fixed
+
+  // Function to toggle fixed position
+  window.onscroll = function() {
+    if (window.scrollY > threshold) {
+      // Add the "fixed" class when scrolled down
+      nav1.classList.add('fixed');
+      nav2.classList.add('fixed');
+    } else {
+      // Remove the "fixed" class when scrolled back up
+      nav1.classList.remove('fixed');
+      nav2.classList.remove('fixed');
+    }
+  };
+
+  const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+
+
+</script>
     
 </body>
 </html>
+
+
