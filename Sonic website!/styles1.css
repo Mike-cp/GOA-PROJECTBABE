@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+#nav1 {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  background-color: #000000;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 700;
+  padding: 6px;
+  font-size: 13px;
+  z-index: 14;
+}
+
+#nav1 img {
+  height: 28px;
+  padding-left: 15px;
+
+}
+
+#nav2 {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: 500;
+  padding: 2px;
+  font-size: 16px;
+  background-color: #4c06d9;
+  z-index: 15;
+}
+
+#video .video-detail{
+    position: relative;
+    bottom: 50px;
+}
+
+#nav2 img {
+  height: 50px;
+  padding-left: 15px;
+}
+
+#video video {
+    
+    position: absolute;
+    height: 855px;
+    width: max-content; /* This can cause overflow if the content inside exceeds the viewport width */
+
+
+
+}
+
+
+.tag {
+  padding: 0 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tag span {
+  color: white;
+  font-weight: 700;
+}
+
+/* Full height hover background */
+.tag:hover {
+  background-color: #2d3441;
+}
+
+/* Special yellow button for email */
+.email {
+  background-color: #ffcd00;
+}
+
+.email span {
+  color: black;
+}
+
+.email:hover {
+  background-color: #e6b800;
+}
+
+#nav1 {
+    display: flex;
+    align-items: stretch; /* important */
+    height: 48px; /* fixes height so children can fill it */
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%; /* full height */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #2d3441;
+}
+
+.email {
+    background-color: #ffcd00;
+}
+
+.email span {
+    color: black;
+}
+
+.email:hover {
+    background-color: #e6b800;
+}
+
+#information_pannel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-image: url(sonic-features-bg.png);
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  width: 100vw;           /* Full viewport width */
+  height: 100vh;          /* Full viewport height */
+  overflow: hidden;  
+  background-size: cover;     /* makes it fill the div while keeping aspect ratio */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  height: 1100px;
+  width: 100%;
+  background-color: yellow;
+
+}
+
+#information_pannel img{
+    height: 350px;
+}
+
+
+a{text-decoration: none; color: white;}
+
+#drift img{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+#drift #driftnew{
+    position: relative;
+     display: inline-block;
+     font-family: 'Bangers', sans-serif; /* comic-style, close to Sonic feel */
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-shadow: 
+    -2px -2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px  2px 0 #000, 
+     2px  2px 0 #000; /* strong outline */
+  letter-spacing: 1px;
+  margin-right: 400px;
+  bottom: 400px;
+  left: 1px;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.3s; /* delay before animation starts */
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#coming-soon{
+    position: relative;
+    bottom: 340px;
+    left: 190px;
+
+    border: solid,white;
+    border-radius: 50px;
+    background-color: white;
+    color: rgb(5, 65, 133);
+    font-size: 2rem;
+
+    opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.3s; 
+
+}
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+#gens {
+  display: flex;
+  width: 100vw;    /* full viewport width */
+  height: 100vh;   /* full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+#sonic-gen, #shadow-gen {
+  flex: 1;            /* equal width */
+  margin: 0;
+  padding: 0;
+  height: 100%;       /* fill container height */
+  overflow: hidden;   /* hide overflow if image ratio is different */
+}
+
+#sonic-gen img, #shadow-gen img {
+  width: 100%;
+  height: 100%;       /* fill the container vertically */
+  object-fit: cover;  /* cover the entire container without distortion */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#gens{
+    position: relative;
+    bottom: 100px;
+}
+
+#gens text{
+    position: relative;
+   background-color: #cc0000;      /* strong red */
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 transparent;
+  border-bottom: 4px solid #ffeb3b; /* bright yellow bottom border */
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  bottom: 50px;
+  left: 250px;
+}
+
+#animated{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #2d3441;
+    color: white;
+    height: 200px;
+    justify-content: center;
+    font-size: 100px;
+    bottom: 100px;
+}
+
+
+
+#videoss {
+  display: flex;
+  position: relative;
+  bottom: 100px;
+
+  width: 100%;
+  height: 480px; /* fixed height to keep ratio */
+  margin: 0;
+  padding: 0;
+
+}
+
+#videoss iframe {
+  flex: 1 1 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+
+
+
+
+
+
