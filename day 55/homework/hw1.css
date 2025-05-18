@@ -1,0 +1,167 @@
+#box{
+    background-color: rgb(107, 20, 20);
+    height: 20%;
+    width: 10%;
+    animation: amimation  2s ease-in-out infinite alternate ;
+}
+
+@keyframes  amimation {
+    0%{
+        transform: translateX(40%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+#background-colors{background-color: black; height: 20%; width: 10%; animation: colorchange 5s ease-in-out; position: relative; top: 50rem}
+
+@keyframes colorchange{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: red;
+    }
+    
+}
+
+
+#rotate{background-color: rgb(42, 3, 3);border: solid black; border-radius: 60px; height: 20%; width: 10%; animation: rotate 1s ease-in-out infinite alternate; position: relative; top: 20rem;}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#pulse{background-color: rgb(42, 3, 3);border: solid black; border-radius: 60px; height: 20%; width: 10%;  position: relative; top: 60rem; animation: pulse 1s ease-in-out infinite alternate;}
+
+
+@keyframes pulse {
+    0%{
+        scale: 1;
+    }
+    50%{scale: 1.5;
+    }
+    100%{scale: 1;}
+    
+}
+
+#ball{background-color: rgb(42, 3, 3);border: solid black; border-radius: 60px; height: 20%; width: 10%;  position: relative; top: 80rem;  animation: bounc 3s ease-in-out 3; position: relative;}
+
+
+@keyframes bounc {
+    0%   { transform: translateY(0); }
+  20%  { transform: translateY(-150px); }
+  40%  { transform: translateY(0); }
+  60%  { transform: translateY(-75px); }
+  80%  { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+    
+}
+
+#spiner{
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: relative;
+    bottom: 30rem;
+}
+
+@keyframes spin{
+    to {transform:rotate(360deg) ;}
+}
+
+#load{
+    background-color: rgb(42, 3, 3);border: solid black; border-radius: 60px; height: 20%; width: 10%;  position: relative; top: 20rem;
+    animation: run 2s linear 1;
+}
+
+@keyframes run{
+    from{transform: translateX(0px);}
+    to{transform: translateX(100px);}
+}
+
+#todd { 
+    background-color: black;
+    border-radius: 60px;
+    border: solid black;
+    height: 20%;
+    width: 10%;
+    position: relative;
+    top: 30rem;
+    animation: moveright 2s ease-in-out 1; 
+}
+
+
+#toggle:checked ~ #todd {
+    animation: moveright 2s ease-in-out infinite alternate; 
+}
+
+@keyframes moveright {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0px); }
+}
+
+
+.element {
+  animation: myAnimation 3s ease forwards;
+  animation-delay: 2s; 
+}
+
+@keyframes myAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: teal;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+
+  /* Different delays to make them animate one after another */
+  .box1 {
+    animation-delay: 0s;  /* starts immediately */
+  }
+  .box2 {
+    animation-delay: 1.5s; /* starts after box1 finishes */
+  }
+  .box3 {
+    animation-delay: 3s; /* starts after box2 finishes */
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  #fade{
+    animation: fade forwards 10s;
+  }
+
+  @keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    
+  }

@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+  <div id="loader">
+  <img src="image copy 32.png" alt="Sonic.exe loader" id="loader-img" />
+</div>
+<!-- Images-->
   <div id="around">
     <div id="transport">
         <a href="sonic.html">
@@ -16,6 +19,7 @@
         </a>
     </div>
    </div>
+   <!--NAV MENU-->
 <div id="all_nav">
    <div id="nav1">
     <a href="main1.html"><img src="image.png"></a>
@@ -75,18 +79,18 @@
   <button class="prev" onclick="switchVideo('prev')">
     <img src="image copy 13.png" alt="Previous">
   </button>
-
+<!--VIDEOS-->
   <div class="video-wrapper">
-    <video id="video1" class="video" autoplay controls>
+    <video id="video1" class="video"  controls>
       <source src="SONIC X SHADOW GENERATIONS - Launch Trailer.mp4" type="video/mp4">
     </video>
 
-    <video id="video2" class="video" autoplay controls style="display: none;">
+    <video id="video2" class="video"   controls style="display: none;">
       <source src="Sonic Rumble – Skill up and show off!.mp4" type="video/mp4">
     </video>
 
-    <video id="video3" class="video" muted autoplay controls style="display: none;">
-      <source src="SONIC X SHADOW GENERATIONS - Story Trailer.mp4" type="video/mp4">
+    <video id="video3" class="video"  controls style="display: none;">
+      <source src="SONIC X SHADOW GENERATIONS - Story Trailer.mp4" m type="video/mp4">
     </video>
   </div>
 
@@ -96,7 +100,7 @@
 </div>
   </div>
 </div>
-
+<!--card-->
   <div class="character-wrapper">
   <div class="character-block">
     <img src="image copy 20.png" alt="Sonic">
@@ -105,7 +109,7 @@
       <p>Sonic – The fastest hedgehog alive! He’s cool, brave, and always ready to stop bad guys. Sonic loves adventure, freedom, and of course… chili dogs!</p>
     </div>
   </div>
-
+<!--card-->
   <div class="character-block">
     <img src="image copy 19.png" alt="Tails">
     <div class="character-info">
@@ -113,7 +117,7 @@
       <p>Shadow – Sonic’s powerful rival and sometimes ally. Created as the Ultimate Life Form, he’s serious, strong, and can use Chaos Control to teleport or slow time. Though he acts tough, deep down he cares about protecting the world in his own way.</p>
     </div>
   </div>
-
+<!--card-->
   <div class="character-block">
     <img src="image copy 18.png" alt="Knuckles">
     <div class="character-info">
@@ -122,47 +126,46 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-    </div>
-    </div>
-
-    <footer>
-        <div id="backgrnd">
-        <text id="textk">MADE BY MIKA!</text>
-        <img src="image copy 25.png" alt="">
-        <div id="border-text">
-        <div id="maintext">
-  <b>Hi there! I'm Mika, and I'm super excited to share this website with you.<br>
-  I built it out of love for everything Sonic — from the classic games<br>
-  to the cool characters we all know and love! 💙<br></b>
-
-  <text style="font-size: 13px;">This site is a fun space where fans like you can explore,<br>
-  enjoy character cards, and dive into the fast-paced universe of Sonic.<br>
-  Whether you're a longtime fan or just getting started,<br>
-  there's something here for everyone.</text>
 </div>
 </div>
 
-        </div>
+<footer><!--CREDIT-->
+  <div id="backgrnd">
+    <p id="textk">MADE BY MIKA!</p>
+    <img src="image copy 25.png" alt="">
 
-    </footer>
+    <div id="border-text">
+      <div id="maintext">
+        <b>
+          Hi there! I'm Mika, and I'm super excited to share this website with you.<br>
+          I built it out of love for everything Sonic — from the classic games<br>
+          to the cool characters we all know and love! 💙<br>
+        </b>
+
+        <p style="font-size: 13px;">
+          This site is a fun space where fans like you can explore,<br>
+          enjoy character cards, and dive into the fast-paced universe of Sonic.<br>
+          Whether you're a longtime fan or just getting started,<br>
+          there's something here for everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 <script>
     window.addEventListener('scroll', function() {
     const nav1 = document.getElementById('nav1');
     const nav2 = document.getElementById('nav2');
-    const scrollPosition = window.scrollY; // Get the current scroll position
+    const scrollPosition = window.scrollY; 
 
-    if (scrollPosition > 100) { // Change this value as needed
-        nav1.style.opacity = '0.7'; // Set opacity to 70% for #nav1 when scrolling down
-        nav2.style.opacity = '0.7'; // Set opacity to 70% for #nav2 when scrolling down
+    if (scrollPosition > 100) { 
+        nav1.style.opacity = '0.7'; 
+        nav2.style.opacity = '0.7'; 
     } else {
-        nav1.style.opacity = '1'; // Set opacity back to 100% for #nav1 when near the top
-        nav2.style.opacity = '1'; // Set opacity back to 100% for #nav2 when near the top
+        nav1.style.opacity = '1'; 
+        nav2.style.opacity = '1'; 
     }
 });
 
@@ -170,49 +173,48 @@ let currentVideoIndex = 0;
 const videos = document.querySelectorAll('.video');
 
 function switchVideo(direction) {
-  videos[currentVideoIndex].style.display = 'none'; // Hide the current video
+  videos[currentVideoIndex].style.display = 'none'; 
 
   if (direction === 'next') {
-    currentVideoIndex = (currentVideoIndex + 1) % videos.length; // Move to next video (loop back)
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length; 
   } else if (direction === 'prev') {
-    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; // Move to previous video (loop back)
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; 
   }
 
-  videos[currentVideoIndex].style.display = 'block'; // Show the new video
+  videos[currentVideoIndex].style.display = 'block';
 }
 
 
-  // Get the nav elements
+  
   const nav1 = document.getElementById('nav1');
   const nav2 = document.getElementById('nav2');
-  const threshold = 200; // You can adjust this value based on when you want the navbars to become fixed
+  const threshold = 200; 
 
-  // Function to toggle fixed position
+  
   window.onscroll = function() {
     if (window.scrollY > threshold) {
-      // Add the "fixed" class when scrolled down
       nav1.classList.add('fixed');
       nav2.classList.add('fixed');
     } else {
-      // Remove the "fixed" class when scrolled back up
+      
       nav1.classList.remove('fixed');
       nav2.classList.remove('fixed');
     }
   };
 
-  const sections = document.querySelectorAll('.section');
+  
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loader = document.getElementById("loader");
+      loader.style.transform = "translateY(-100%)";
+      loader.style.opacity = "0";
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
+      setTimeout(() => {
+        loader.remove();
+      }, 1000);
+    }, 3000);
   });
-});
 
-sections.forEach(section => {
-  observer.observe(section);
-});
 
 
 

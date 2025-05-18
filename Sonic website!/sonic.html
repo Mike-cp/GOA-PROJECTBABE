@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-
+  <div id="loader">
+  <img src="image copy 32.png" alt="Sonic.exe loader" id="loader-img" />
+</div>
   <div id="around">
     <div id="transport">
         <a href="Main.html">
@@ -16,7 +18,7 @@
         </a>
     </div>
    </div>
-<div id="all_nav">
+<div id="all_nav"><!--NAV-->
    <div id="nav1">
     <a href="main1.html"><img src="image.png"></a>
     <div class="tag">
@@ -32,7 +34,7 @@
         <span>EMAIL SIGN UP</span>
     </div>
 </div>
-
+<!--NAV-->
     <div style="text-decoration: none;" id="nav2">
         <img src="image copy 7.png">
         <a href="#information_pannel"><span>WHAT`s NEW</span></a>
@@ -42,8 +44,7 @@
 </div>
     <div id="video-container">
   <!-- Spiky Top Border -->
-  <div class="spiky-border top"></div>
-  
+  <div class="spiky-border top"></div> 
   <div id="video">
     <img src="image copy 10.png" class="image-bottom">
     <img src="image copy 24.png" class="image-top">
@@ -54,7 +55,6 @@
     <img id="image" src="image copy 17.png">
     <a href="#video1"><text>WATCH TRAILER</text></a>
   </div>
-  
   <!-- Spiky Bottom Border -->
   <div class="spiky-border bottom"></div>
 </div>
@@ -67,7 +67,6 @@
     </div>
     </div>
     <div id="spikes1">
-
     <div id="section3">
         <text id="MEDIA">MEDIA</text>
         <img id="background"  src="sonic-media-bg.jpg">
@@ -75,28 +74,27 @@
   <button class="prev" onclick="switchVideo('prev')">
     <img src="image copy 13.png" alt="Previous">
   </button>
-
+<!--VIDEOS-->
   <div class="video-wrapper">
-    <video id="video1" class="video" autoplay controls>
+    <video id="video1" class="video"  controls>
       <source src="SONIC X SHADOW GENERATIONS - Launch Trailer.mp4" type="video/mp4">
     </video>
 
-    <video id="video2" class="video" autoplay controls style="display: none;">
+    <video id="video2" class="video"  controls style="display: none;">
       <source src="Sonic Rumble – Skill up and show off!.mp4" type="video/mp4">
     </video>
 
-    <video id="video3" class="video" autoplay controls style="display: none;">
+    <video id="video3" class="video"  controls style="display: none;">
       <source src="SONIC X SHADOW GENERATIONS - Story Trailer.mp4" type="video/mp4">
     </video>
   </div>
-
   <button class="next" onclick="switchVideo('next')">
     <img src="image copy 11.png" alt="Next">
   </button>
 </div>
   </div>
 </div>
-
+<!--card-->
   <div class="character-wrapper">
   <div class="character-block">
     <img src="image copy 20.png" alt="Sonic">
@@ -105,7 +103,7 @@
       <p>Sonic – The fastest hedgehog alive! He’s cool, brave, and always ready to stop bad guys. Sonic loves adventure, freedom, and of course… chili dogs!</p>
     </div>
   </div>
-
+<!--card-->
   <div class="character-block">
     <img src="image copy 19.png" alt="Tails">
     <div class="character-info">
@@ -113,7 +111,7 @@
       <p>Shadow – Sonic’s powerful rival and sometimes ally. Created as the Ultimate Life Form, he’s serious, strong, and can use Chaos Control to teleport or slow time. Though he acts tough, deep down he cares about protecting the world in his own way.</p>
     </div>
   </div>
-
+<!--card-->
   <div class="character-block">
     <img src="image copy 18.png" alt="Knuckles">
     <div class="character-info">
@@ -124,7 +122,7 @@
 </div>
     </div>
     </div>
-
+<!--game-->
     <iframe id="game"
   src="https://itch.io/embed-upload/10961091?color=333333"
   width="960"
@@ -132,26 +130,30 @@
   frameborder="0"
   allowfullscreen>
 </iframe>
+ <footer>
+  <div id="backgrnd">
+    <p id="textk">MADE BY MIKA!</p>
+    <img src="image copy 25.png" alt="">
 
+    <div id="border-text">
+      <div id="maintext">
+        <b>
+          Hi there! I'm Mika, and I'm super excited to share this website with you.<br>
+          I built it out of love for everything Sonic — from the classic games<br>
+          to the cool characters we all know and love! 💙<br>
+        </b>
 
-    <footer>
-        <div id="backgrnd">
-        <text id="textk">MADE BY MIKA!</text>
-        <img src="image copy 25.png" alt="">
-        <div id="border-text">
-        <div id="maintext">
-  <b>Hi there! I'm Mika, and I'm super excited to share this website with you.<br>
-  I built it out of love for everything Sonic — from the classic games<br>
-  to the cool characters we all know and love! 💙<br></b>
+        <p style="font-size: 13px;">
+          This site is a fun space where fans like you can explore,<br>
+          enjoy character cards, and dive into the fast-paced universe of Sonic.<br>
+          Whether you're a longtime fan or just getting started,<br>
+          there's something here for everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <text style="font-size: 13px;">This site is a fun space where fans like you can explore,<br>
-  enjoy character cards, and dive into the fast-paced universe of Sonic.<br>
-  Whether you're a longtime fan or just getting started,<br>
-  there's something here for everyone.</text>
-</div>
-</div>
-
-        </div>
 
 <script>
     window.addEventListener('scroll', function() {
@@ -216,8 +218,17 @@ sections.forEach(section => {
 });
 
 
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loader = document.getElementById("loader");
+      loader.style.transform = "translateY(-100%)";
+      loader.style.opacity = "0";
 
-
+      setTimeout(() => {
+        loader.remove();
+      }, 1000);
+    }, 3000);
+  });
 </script>
     
 </body>

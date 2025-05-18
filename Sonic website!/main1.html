@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link  rel="stylesheet" href="styles1.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles1.css">
 
-</head>
-<body>
-<div id="all_nav">
-   <div id="nav1">
-    <a href="main1.html"><img src="image.png"></a>
-    <div class="tag">
-        <a href="#game"><span>GAMES</span></a>
-    </div>
-    <div class="tag">
-        <span>STORE</span>
-    </div>
-    <div class="tag">
-        <a href="#character-wrapper"><span>CHARACTERS</span></a>
-    </div>
-    <div class="tag email">
-        <span>EMAIL SIGN UP</span>
-    </div>
-</div>
+    </head>
+    <body><!--LLOader-->
+        <div id="loader">
+            <img src="image copy 32.png" alt="Sonic.exe loader"
+                id="loader-img" />
+        </div>
 
-    <div id="nav2">
-        <img src="image copy 7.png">
-        <a href="#gens"><span>WHAT`s NEW</span></a>
-        <span>GAMES</span>
-        <span>SHOP</span>
-    </div>
-</div>
-<div id="drift">
-    <img src="image copy 30.png">
-    <text id="coming-soon">Coming Soon</text>
-    <text id="driftnew">Drift Accros Dimensions!</text>
-</div>
+        <!--NAV -->
+        <div id="all_nav">
+            <div id="nav1">
+                <a href="main1.html"><img src="image.png"></a>
+                <div class="tag">
+                    <a href="#game"><span>GAMES</span></a>
+                </div>
+                <div class="tag">
+                    <span>STORE</span>
+                </div>
+                <div class="tag">
+                    <a href="#character-wrapper"><span>CHARACTERS</span></a>
+                </div>
+                <div class="tag email">
+                    <span>EMAIL SIGN UP</span>
+                </div>
+            </div>
 
-<div id="gens">
-<div id="sonic-gen">
-    <img src="image copy 28.png">
-    <a href="sonic.html"><text>Learn More</text></a>
-</div>
-<div id="shadow-gen">
-    <img src="image copy 29.png" alt="">
-   <a href="Main.html"><text>Learn More</text></a>
-</div>
-</div>
+            <div id="nav2"><!--NEWS-->
+                <img src="image copy 7.png">
+                <a href="#gens"><span>WHAT`s NEW</span></a>
+                <span>GAMES</span>
+                <span>SHOP</span>
+            </div>
+        </div>
+        <div id="drift">
+            <img src="image copy 30.png">
+            <text id="coming-soon">Coming Soon</text>
+            <text id="driftnew">Drift Accros Dimensions!</text>
+        </div>
 
-<div id="animated">
-    <text>Animated Specials</text>
-</div>
+        <div id="gens">
+            <div id="sonic-gen">
+                <img src="image copy 28.png">
+                <a href="sonic.html"><text>Learn More</text></a>
+            </div>
+            <div id="shadow-gen">
+                <img src="image copy 29.png" alt>
+                <a href="Main.html"><text>Learn More</text></a>
+            </div>
+        </div>
 
-<div id="videoss">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/4wzSw2iuk_8" title="Sonic Superstars: Trio of Trouble" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/rii-OEBog9A" title="Sonic Dream Team - Animated Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+        <div id="animated"><!--ANIMATIONS-->
+            <text>Animated Specials</text>
+        </div>
+
+        <div id="videoss"><!--videos-->
+            <iframe width="853" height="480"
+                src="https://www.youtube.com/embed/4wzSw2iuk_8"
+                title="Sonic Superstars: Trio of Trouble" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            <iframe width="853" height="480"
+                src="https://www.youtube.com/embed/rii-OEBog9A"
+                title="Sonic Dream Team - Animated Intro" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+        </div>
+        <script> 
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loader = document.getElementById("loader");
+      loader.style.transform = "translateY(-100%)";
+      loader.style.opacity = "0";
+
+      setTimeout(() => {
+        loader.remove();
+      }, 1000);
+    }, 3000);
+  });
+</script>
 
 </body>
 </html>
